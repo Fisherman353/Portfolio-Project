@@ -1,0 +1,72 @@
+:root{
+    --color-color-header: #fff;
+    --color-color-body: #68676c;
+    --color-color-primary: #F4CE14;
+}
+
+.html{
+    font-size: 62.5%;
+}
+body{
+    background-color: #1f1f29;
+    font-family: 'Inter', sans-serif;
+}
+
+/*Container*/
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+/*Profile*/
+.profile{
+    background: #242430;
+    max-width: 300px;
+    max-height: 300px;
+    padding-bottom: 1rem;
+
+}
+.profile__name{
+    color: var(--color-color-header);
+}
+.profile__position{
+    color: var(--color-color-body);
+    margin: 0 auto;
+    padding: 0.2rem;
+
+}
+.profile__image{
+    border-radius: 20%;
+    width: 50%;
+    margin-top: 1rem;
+    transition: transform 0.3s;
+}
+.profile__image:hover{
+    transform: scale(1.05);
+}
+
+/*grid*/
+.grid{
+    display: grid;
+    
+}
+.grid--1x2{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+/*info*/
+.info > p:nth-child(odd){
+    font-weight: 700;
+    color: var(--color-color-header);
+}
+.info > p:nth-child(even){
+    color: var(--color-color-body);
+}
+.grid{
+    border-bottom: 1px solid white;
+}
+
