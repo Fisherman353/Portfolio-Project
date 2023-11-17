@@ -1,9 +1,9 @@
-:root{
-    --color-color-header: #fff;
-    --color-color-body: #68676c;
-    --color-color-primary: #F4CE14;
-    --border-bottom: 1px solid var(--color-color-header);
-    --border-color-primary: #242430;
+:root {
+  --color-color-header: #fff;
+  --color-color-body: #68676c;
+  --color-color-primary: #f4ce14;
+  --border-bottom: 1px solid var(--color-color-header);
+  --border-color-primary: #242430;
 }
 
 *,
@@ -12,117 +12,216 @@
   box-sizing: border-box;
 }
 
-.html{
-    font-size: 62.5%;
+h1,h2{
+    color: var(--color-color-header);
 }
-body{
-    background-color: #1f1f29;
-    font-family: 'Inter', sans-serif;
+.html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #1f1f29;
+  font-family: "Inter", sans-serif;
 }
 /*Container*/
-.container{
-    display: flex;
-    
+.container {
+  display: flex;
 }
-.container--30vw{
-    width: 30vw;
-    background: #2e2e4a;
-    flex-direction: column;
-    justify-content: center;
-    margin: 1rem;
-    
+.container-main{
+    flex-direction: row;
+}
+.container--30vw {
+  width: 30vw;
+  background: #2e2e4a;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+}
+.container--70vw {
+  width: 70vw;
+  margin: 1rem;
 }
 
 /*Profile*/
-.profile{
-    background: var(--border-color-primary);
-    justify-self: center;
-    padding-bottom: 1rem;
-    text-align: center;
+.profile {
+  background: var(--border-color-primary);
+  justify-self: center;
+  padding-bottom: 1rem;
+  text-align: center;
 }
-.profile__name{
-    color: var(--color-color-header);
+.profile__name {
+  color: var(--color-color-header);
 }
-.profile__position{
-    color: var(--color-color-body);
-    margin: 0 auto;
-    padding: 0.2rem;
+.profile__position {
+  color: var(--color-color-body);
+  margin: 0 auto;
+  padding: 0.2rem;
 }
-.profile__image{
-    justify-self: center;
-    border-radius: 20%;
+.profile__image {
+  justify-self: center;
+  border-radius: 20%;
 
-    margin-top: 1rem;
-    transition: transform 0.3s;
+  margin-top: 1rem;
+  transition: transform 0.3s;
 }
-.profile__image:hover{
-    transform: scale(1.05);
+.profile__image:hover {
+  transform: scale(1.05);
 }
 
 /*grid*/
-.grid{
-    display: grid;
-    justify-self: center;
-    margin: .5rem;
-    text-align: center;
+.grid {
+  display: grid;
+  justify-self: center;
+  margin: 0.5rem;
+  text-align: center;
 }
-.grid--1x2{
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3,1fr);
+.grid--2x3 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
-
-
+.grid--2x1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+.grid--3x2{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,fr);
+    grid-gap: 2rem;
+}
+  
 /*info*/
-.info > p:nth-child(odd){
-    font-weight: 700;
-    color: var(--color-color-header);
-}
-.info > p:nth-child(even){
-    color: var(--color-color-body);
-}
-.grid{
+.info{
     border-bottom: var(--border-bottom);
+}
+.info > p:nth-child(odd) {
+  font-weight: 700;
+  color: var(--color-color-header);
+}
+.info > p:nth-child(even) {
+  color: var(--color-color-body);
 }
 
 /*LanguageBar*/
-.language{
-    margin: 0 1rem;
-    flex-direction: row;
-    justify-content: space-evenly;
-    color: var(--color-color-header);
-    text-align: center;
-    border-bottom: var(--border-bottom);
+.language {
+  margin: 0 1rem;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: var(--color-color-header);
+  text-align: center;
+  border-bottom: var(--border-bottom);
 }
-.language__score{
-    border-bottom: 3px solid var(--color-color-primary);
+.language__score {
+  border-bottom: 3px solid var(--color-color-primary);
 }
 
 /*List*/
-.list{
-    border-bottom: var(--border-bottom);
-    margin: 0 1rem;
-
+.list {
+  border-bottom: var(--border-bottom);
+  margin: 0 1rem;
 }
-.list__unordered{
-    list-style-image: url(../images/tick.svg);
+.list__unordered {
+  list-style-image: url(../images/tick.svg);
 }
-.list__item{
-    color: var(--color-color-body);
-    letter-spacing: 1px;
+.list__item {
+  color: var(--color-color-body);
+  letter-spacing: 1px;
 }
 
 /*footer-aside*/
-.footer-aside{
-    margin: 1rem;
+.footer-aside {
+  margin: 1rem;
 }
-.footer-aside .container{
+.footer-aside .container {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.footer-aside .container > a {
+  color: black;
+  transition: color 0.2s;
+}
+.footer-aside .container > a:hover {
+  color: white;
+}
+
+/*Card*/
+.card {
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+}
+.card__headings{
+    color: var(--color-color-header);
+    text-align: left;
+    align-self: center;
+}
+.card__hightlight{
+    color: var(--color-color-primary);
+}
+.card__image{
+    max-width: 100%;
+    border-radius: 10px;
+}
+.card__button{
+    background: var(--color-color-primary);
+    padding: 1rem 2rem;
+    border: 1px solid black;
+    font-weight: 700;
+    letter-spacing: 1px;
+    justify-self: left;
+    max-width: 15rem;
+    transition: backgrond-color 0.5s;
+
+}
+.card__button:hover{
+   background-color: #e7d36f;
+}
+.card__container{
+    flex-direction: column;
+    justify-content: left;
+}
+
+/*Records*/
+.record .container{
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 2rem;
+    max-width: 100%;
 }
-.footer-aside .container > a{
-    color: black;
-    transition: color .2s;
+.records__content > p {
+    padding: 0 1rem;
+    color: var(--color-color-header);
 }
-.footer-aside .container > a:hover{
-    color: white;
+.records__content > p > span{
+    color: var(--color-color-primary);
+    font-weight: 700;
 }
+/*Services*/
+.services__card{
+    border:0;
+    background:var(--border-color-primary) ;
+    text-align: left;
+    padding: 1rem;
+    letter-spacing: 1px;
+}
+.services__card__header{
+    color: var(--color-color-header);
+    font-weight: 700;
+    margin-top: .2rem;
+}
+.services__card__content{
+    color: var(--color-color-body);
+}
+.services__card__link{
+    color: var(--color-color-primary);
+    font-weight: 700;
+    text-decoration: none;
+    text-transform:uppercase ;
+    transition: backgrond-color 0.5s;
+}
+.services__card__link:hover{
+
+    color: #eada85;
+}
+
